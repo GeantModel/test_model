@@ -40,7 +40,7 @@ RunAction::~RunAction() {
 void RunAction::AddEvent(G4String name, G4double energy) {
     auto it = res->lower_bound(energy);
     it->second++;
-    
+
     if(name == "box") {
         N1++;
     } else if(name == "box1") {

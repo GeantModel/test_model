@@ -4,7 +4,7 @@
 #include "PrimaryGen.hh"
 
 PrimaryGen::PrimaryGen() {
-    gun = new G4ParticleGun(1);
+    gun = new G4ParticleGun(100);
     G4cout<<"Primary particles generator is created successfully\t\tOK!!!"<<G4endl;
 }
 
@@ -33,8 +33,8 @@ void PrimaryGen::GeneratePrimaries(G4Event* anEvent) {
     double z = 2*G4UniformRand()-1;
     double r = sqrt(x*x + y*y + z*z);
 
-    gun->SetParticleMomentumDirection(G4ThreeVector(x/r, y/r, z/r));
-//    gun->SetParticleMomentumDirection(G4ThreeVector(1, 0, 0));
+//    gun->SetParticleMomentumDirection(G4ThreeVector(x/r, y/r, z/r));
+    gun->SetParticleMomentumDirection(G4ThreeVector(-1, 0, 0));
 
 
     gun->GeneratePrimaryVertex(anEvent);
