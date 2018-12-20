@@ -27,14 +27,13 @@ DetGeometry::~DetGeometry() {}
 G4VPhysicalVolume* DetGeometry::Construct(){
 
     G4Material *polystyrene = nist->FindOrBuildMaterial("G4_POLYSTYRENE");
-  // G4Material *YAP = nist->FindOrBuildMaterial("G4_WATER");
     G4Element *Y = nist->FindOrBuildElement("Y");
     G4Element *Al = nist->FindOrBuildElement("Al");
     G4Element *O = nist->FindOrBuildElement("O");
     G4Material *YAP = new G4Material("YAP", 5.37*g/cm3,3, kStateSolid);
-     YAP->AddElement(Y,1);
-     YAP->AddElement(Al,1);
-     YAP->AddElement(O,3);
+    YAP->AddElement(Y,1);
+    YAP->AddElement(Al,1);
+    YAP->AddElement(O,3);
 
     std::ofstream fout("../material.txt");
     fout<<polystyrene<<'\n';
