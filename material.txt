@@ -11,17 +11,20 @@
          --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
           ElmMassFraction:   7.74 %  ElmAbundance  50.00 % 
 
- Material: G4_WATER H_2O   density:  1.000 g/cm3   RadL:  36.083 cm   Nucl.Int.Length:  75.375 cm 
-                       Imean:  78.000 eV 
+ Material:      YAP    density:  5.370 g/cm3   RadL:   2.758 cm   Nucl.Int.Length:  22.270 cm 
+                       Imean: 212.593 eV 
 
-   --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
-         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
-         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
-          ElmMassFraction:  11.19 %  ElmAbundance  66.67 % 
+   --->  Element: Y (Y)   Z = 39.0   N =    89   A = 88.906 g/mole
+         --->  Isotope:   Y89   Z = 39   N =  89   A =  88.91 g/mole   abundance: 100.000 %
+          ElmMassFraction:  54.25 %  ElmAbundance  20.00 % 
+
+   --->  Element: Al (Al)   Z = 13.0   N =    27   A = 26.982 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.000 %
+          ElmMassFraction:  16.46 %  ElmAbundance  20.00 % 
 
    --->  Element: O (O)   Z =  8.0   N =    16   A = 15.999 g/mole
          --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance: 99.757 %
          --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:  0.038 %
          --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
-          ElmMassFraction:  88.81 %  ElmAbundance  33.33 % 
+          ElmMassFraction:  29.29 %  ElmAbundance  60.00 % 
 
