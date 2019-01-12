@@ -7,18 +7,20 @@
 #include "G4RunManager.hh"
 #include "RunAction.hh"
 
-class EventAction : public G4UserEventAction {
-private:
-    RunAction *runAction;
-    std::map<G4String, G4double> *result;
+class RunAction;
+
+class EventAction: public G4UserEventAction {
 public:
-   EventAction(RunAction *runAction);
+    explicit EventAction(RunAction* runAction);
 
-    virtual void BeginOfEventAction(const G4Event* event);
-    virtual void EndOfEventAction(const G4Event* event);
-    void Data(G4String name, G4double Energy);
-private:
+    void BeginOfEventAction(const G4Event *anEvent);
+    void EndOfEventAction(const G4Event *anEvent);
+    void AddEnDep(G4double en);
+    void AddSunEn(G4double en);
 
+private: RunAction *run;
+    G4double EnergyDep;
+    G4double EnergySum;
 };
 
 #endif //PW_2_GEOMETRY_EVENTACT_HH

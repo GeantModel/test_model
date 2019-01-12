@@ -5,6 +5,7 @@
 
 PrimaryGen::PrimaryGen() {
     gun = new G4ParticleGun(1000);
+    Energy = 1.25 * MeV;
     G4cout<<"Primary particles generator is created successfully\t\tOK!!!"<<G4endl;
 }
 
@@ -14,7 +15,7 @@ PrimaryGen::~PrimaryGen() {
 
 void PrimaryGen::GeneratePrimaries(G4Event* anEvent) {
     gun->SetParticleDefinition(G4Gamma::GammaDefinition());
-    gun->SetParticleEnergy(662 * keV);
+    gun->SetParticleEnergy(Energy);
 
     gun->SetParticlePosition(G4ThreeVector(0,0,0));
 

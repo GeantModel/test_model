@@ -38,4 +38,4 @@
 
 # Re-establish auto refreshing and verbosity:
 /vis/viewer/set/autoRefresh true
-
+/run/beamOn 100

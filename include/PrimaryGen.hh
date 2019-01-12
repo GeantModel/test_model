@@ -20,6 +20,8 @@ class PrimaryGen : public G4VUserPrimaryGeneratorAction
 {
 private:
     G4ParticleGun*  gun;
+    G4double Energy;
+
 public:
     PrimaryGen();
     virtual ~PrimaryGen();

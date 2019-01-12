@@ -8,13 +8,15 @@
 #include <G4UserSteppingAction.hh>
 #include <EventAction.hh>
 
-class StepAction: public G4UserSteppingAction {
-private:
-    EventAction* eventAction;
+class EventAction;
 
+class StepAction: public G4UserSteppingAction{
 public:
-    StepAction(EventAction* event);
-    void UserSteppingAction(const G4Step *step) override;
+    StepAction(EventAction* eventAction);
+    void UserSteppingAction(const G4Step*);
+
+private:
+    EventAction* event;
 };
 
 #endif //PW_2_GEOMETRY_STEPACTION_HH
