@@ -5,17 +5,17 @@
 #include "EventAction.hh"
 
 StepAction::StepAction(EventAction* eventAction):event(eventAction) {
-   eventAction = event;
+   // eventAction = event;
 }
 
 void StepAction::UserSteppingAction(const G4Step *aStep) {
 
-    if (aStep->GetTrack()->GetVolume()->GetLogicalVolume()->GetName() == "scin_CH_log" &&
-        aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "gamma"  &&
-        aStep->GetNumberOfSecondariesInCurrentStep() == 0
-        ) {
+    if (aStep->GetTrack()->GetVolume()->GetLogicalVolume()->GetMaterial()->GetName()=="G4_POLYSTYRENE"
+     //   && aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "gamma"
+     //   && aStep->GetNumberOfSecondariesInCurrentStep() == 0
+            ) {
 
-        event->AddEnDep(aStep->GetTrack()->GetKineticEnergy());
+        event->AddEnDep(aStep->GetTotalEnergyDeposit());
         event->AddSunEn(aStep->GetTotalEnergyDeposit());
 
     }

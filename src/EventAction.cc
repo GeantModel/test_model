@@ -16,10 +16,11 @@ void EventAction::EndOfEventAction(const G4Event *anEvent) {
 }
 
 void EventAction::AddEnDep(G4double en){
-    EnergyDep=en;
+    EnergyDep=+en;
 }
 
 void EventAction::AddSunEn(G4double en) {
     EnergySum=+en;
+
 }
 

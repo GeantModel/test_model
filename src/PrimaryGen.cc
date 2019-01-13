@@ -4,7 +4,7 @@
 #include "PrimaryGen.hh"
 
 PrimaryGen::PrimaryGen() {
-    gun = new G4ParticleGun(1000);
+    gun = new G4ParticleGun(1);
     Energy = 1.25 * MeV;
     G4cout<<"Primary particles generator is created successfully\t\tOK!!!"<<G4endl;
 }
